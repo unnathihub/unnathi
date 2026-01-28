@@ -1,0 +1,769 @@
+This behavior occurs due to JavaScript’s type coercion mechanism. Understanding this is essential to avoid logical errors.
+JAVASCRIPT CONTROL STATEMENTS – DETAILED EXPLANATION WITH OUTPUT
+===============================================================
+
+1. SWITCH STATEMENT
+------------------
+Code:
+let day = 3;
+switch(day) {
+  case 1: console.log("Monday"); break;
+  case 2: console.log("Tuesday"); break;
+  case 3: console.log("Wednesday"); break;
+  default: console.log("Invalid day");
+}
+
+Explanation:
+The value of variable 'day' is 3. The switch statement compares this value with each case.
+When it matches case 3, the corresponding statement is executed and break stops further checking.
+
+Output Explanation:
+Since day = 3 matches case 3, "Wednesday" is printed.
+
+Output:
+Wednesday
+
+
+2. IF-ELSE STATEMENT
+-------------------
+Code:
+let age = 20;
+if(age >= 18) {
+  console.log("Eligible to vote");
+} else {
+  console.log("Not eligible to vote");
+}
+
+Explanation:
+The condition checks whether age is greater than or equal to 18.
+
+Output Explanation:
+Age is 20, which satisfies the condition, so the if-block executes.
+
+Output:
+Eligible to vote
+
+
+3. NESTED IF-ELSE STATEMENT
+--------------------------
+Code:
+let marks = 85;
+if(marks >= 90) {
+  console.log("Grade A");
+} else if(marks >= 75) {
+  console.log("Grade B");
+} else {
+  console.log("Grade C");
+}
+
+Explanation:
+Multiple conditions are checked one by one until a true condition is found.
+
+Output Explanation:
+Marks are 85. It is not >= 90, but it is >= 75, so Grade B is printed.
+
+Output:
+Grade B
+
+
+4. WHILE LOOP (6 EXAMPLES)
+-------------------------
+
+Example 1:
+Code:
+let i = 1;
+while(i <= 3) {
+  console.log(i);
+  i++;
+}
+
+Explanation:
+The loop runs as long as i is less than or equal to 3.
+
+Output Explanation:
+i starts at 1 and increments after each loop until it becomes 4, so values 1, 2, and 3 are printed.
+
+Output:
+1 2 3
+
+
+Example 2:
+Code:
+let n = 5;
+while(n > 0) {
+  console.log(n);
+  n--;
+}
+
+Explanation:
+The loop runs while n is greater than 0.
+
+Output Explanation:
+n starts at 5 and decreases each time until it becomes 0, printing numbers from 5 to 1.
+
+Output:
+5 4 3 2 1
+
+
+Example 3:
+Code:
+let sum = 0, x = 1;
+while(x <= 5) {
+  sum += x;
+  x++;
+}
+
+Explanation:
+The loop adds numbers from 1 to 5.
+
+Output Explanation:
+The values 1+2+3+4+5 are added to sum, resulting in 15.
+
+Output:
+15
+
+
+Example 4:
+Code:
+let a = 2;
+while(a <= 10) {
+  console.log(a);
+  a += 2;
+}
+
+Explanation:
+The loop prints even numbers.
+
+Output Explanation:
+a starts at 2 and increases by 2 until it exceeds 10, printing even numbers.
+
+Output:
+2 4 6 8 10
+
+
+Example 5:
+Code:
+let str = "JS";
+let count = 0;
+while(count < str.length) {
+  console.log(str[count]);
+  count++;
+}
+
+Explanation:
+The loop iterates through each character of the string.
+
+Output Explanation:
+The string has two characters, so each character is printed separately.
+
+Output:
+J S
+
+
+Example 6:
+Code:
+let num = 1;
+while(num <= 1) {
+  console.log("Runs once");
+  num++;
+}
+
+Explanation:
+The condition is true only once.
+
+Output Explanation:
+The loop executes one time and then stops because num becomes 2.
+
+Output:
+Runs once
+
+
+5. DO-WHILE LOOP (6 EXAMPLES)
+----------------------------
+
+Example 1:
+Code:
+let i = 1;
+do {
+  console.log(i);
+  i++;
+} while(i <= 3);
+
+Explanation:
+The do-while loop executes at least once before checking the condition.
+
+Output Explanation:
+The loop prints numbers 1 to 3.
+
+Output:
+1 2 3
+
+
+Example 2:
+Code:
+let n = 5;
+do {
+  console.log(n);
+  n--;
+} while(n > 0);
+
+Explanation:
+The loop runs until n becomes 0.
+
+Output Explanation:
+Numbers from 5 down to 1 are printed.
+
+Output:
+5 4 3 2 1
+
+
+Example 3:
+Code:
+let x = 1, sum = 0;
+do {
+  sum += x;
+  x++;
+} while(x <= 5);
+
+Explanation:
+The loop calculates the sum of first five numbers.
+
+Output Explanation:
+1+2+3+4+5 results in 15.
+
+Output:
+15
+
+
+Example 4:
+Code:
+let a = 2;
+do {
+  console.log(a);
+  a += 2;
+} while(a <= 10);
+
+Explanation:
+Even numbers are printed using do-while.
+
+Output Explanation:
+Even numbers from 2 to 10 are displayed.
+
+Output:
+2 4 6 8 10
+
+
+Example 5:
+Code:
+let str = "OK";
+let i2 = 0;
+do {
+  console.log(str[i2]);
+  i2++;
+} while(i2 < str.length);
+
+Explanation:
+Characters of a string are printed.
+
+Output Explanation:
+Each character of the string is printed separately.
+
+Output:
+O K
+
+
+Example 6:
+Code:
+let num = 10;
+do {
+  console.log("Executes at least once");
+} while(num < 5);
+
+Explanation:
+Even though the condition is false, the loop runs once.
+
+Output Explanation:
+The message is printed once because do-while executes before checking the condition.
+
+Output:
+Executes at least once
+
+
+6. FOR LOOP
+-----------------------------------
+Code:
+for(let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+
+Explanation:
+The for loop initializes, checks condition, and increments in one line.
+
+Output Explanation:
+The loop runs from 1 to 5, printing each number.
+
+Output:
+1 2 3 4 5
+
+
+Working with Five Different Sets of Strings in JavaScript
+
+JavaScript strings are sequences of characters used to store and manipulate text. They are commonly used for names, messages, user input, and display content.
+
+In this section, we will work with five different string sets and understand how JavaScript processes them.
+
+String Set 1: Basic String Operations
+let str1 = "Hello";
+let str2 = "World";
+let result = str1 + " " + str2;
+console.log(result);
+
+
+Explanation:
+Here, two strings are combined using the + operator. A space is added between them to form a readable sentence. This is called string concatenation.
+
+Output:
+Hello World
+
+String Set 2: Length and Uppercase
+let text = "javascript";
+console.log(text.length);
+console.log(text.toUpperCase());
+
+
+Explanation:
+The length property counts the number of characters in a string.
+The toUpperCase() method converts all letters into capital letters.
+
+Output:
+10
+JAVASCRIPT
+
+String Set 3: Extracting a Substring
+let message = "Welcome to Coding";
+let part = message.substring(0, 7);
+console.log(part);
+
+
+Explanation:
+The substring() method extracts characters between two indexes.
+Here, it extracts characters from index 0 to 7 (not including 7).
+
+Output:
+Welcome
+
+String Set 4: Replacing Text
+let sentence = "I like Java";
+let newSentence = sentence.replace("Java", "JavaScript");
+console.log(newSentence);
+
+
+Explanation:
+The replace() method searches for a word and replaces it with another.
+Here, "Java" is replaced with "JavaScript".
+
+Output:
+I like JavaScript
+
+String Set 5: Splitting a String
+let data = "red,green,blue,yellow";
+let colors = data.split(",");
+console.log(colors);
+
+
+Explanation:
+The split() method breaks a string into an array based on a separator.
+Here, it splits the string wherever a comma appears.
+
+Output:
+["red", "green", "blue", "yellow"]
+
+=== PAGE BREAK ===
+
+PAGE 11
+Function Prototypes in JavaScript (Five Scenarios)
+
+In JavaScript, every function has a prototype property.
+The prototype is used to share properties and methods between all objects created from a constructor function.
+
+This avoids duplication and saves memory.
+
+Scenario 1: Adding a Method Using Prototype
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.sayHello = function() {
+  return "Hello, my name is " + this.name;
+};
+
+let p1 = new Person("Rahul");
+console.log(p1.sayHello());
+
+
+Explanation:
+The sayHello() method is added to the prototype.
+All objects created using Person can access this method.
+
+Output:
+Hello, my name is Rahul
+
+Scenario 2: Sharing a Property Using Prototype
+function Car(brand) {
+  this.brand = brand;
+}
+
+Car.prototype.wheels = 4;
+
+let c1 = new Car("Honda");
+let c2 = new Car("Toyota");
+
+console.log(c1.wheels);
+console.log(c2.wheels);
+
+
+Explanation:
+The wheels property is stored in the prototype.
+Both objects access the same shared property.
+
+Output:
+4
+4
+
+Scenario 3: Overriding a Prototype Property
+function Animal(type) {
+  this.type = type;
+}
+
+Animal.prototype.sound = "Generic Sound";
+
+let dog = new Animal("Dog");
+dog.sound = "Bark";
+
+console.log(dog.sound);
+
+
+Explanation:
+The object overrides the prototype property by defining its own.
+The local property is used instead of the prototype version.
+
+Output:
+Bark
+
+Scenario 4: Adding Prototype Method After Object Creation
+function User(username) {
+  this.username = username;
+}
+
+let u1 = new User("admin");
+
+User.prototype.getRole = function() {
+  return "User role: normal";
+};
+
+console.log(u1.getRole());
+
+
+Explanation:
+Even though the method is added after the object is created,
+JavaScript still allows access because of prototype chaining.
+
+Output:
+User role: normal
+
+Scenario 5: Checking Prototype Relationship
+function Book(title) {
+  this.title = title;
+}
+
+let b1 = new Book("JavaScript Basics");
+
+console.log(Book.prototype.isPrototypeOf(b1));
+
+
+Explanation:
+The isPrototypeOf() method checks whether an object exists in another object's prototype chain.
+
+Output:
+true
+
+Working with a Level-6 Nested Array in JavaScript
+(Using flat(), push(), pop(), and pull-like logic)
+
+In JavaScript, arrays can contain other arrays.
+When arrays are nested many levels deep, they become complex to handle.
+Here we create a level-6 nested array and work on it using four practical array operations.
+
+Step 1: Create a Level-6 Nested Array
+let deepArray = [1, [2, [3, [4, [5, [6, 7]]]]]];
+console.log(deepArray);
+
+
+Explanation:
+This array is nested six levels deep.
+Each element contains another array inside it.
+Such deep structures appear in JSON data, APIs, and tree-like data models.
+
+Method 1: flat() – Flatten the Entire Array
+let flatArray = deepArray.flat(6);
+console.log(flatArray);
+
+
+Explanation:
+The flat() method removes all nested arrays and returns a new flat array.
+The number 6 tells JavaScript how deep the flattening should go.
+
+Output:
+[1, 2, 3, 4, 5, 6, 7]
+
+Why useful:
+It converts complex nested data into a simple list that is easy to process.
+
+Method 2: push() – Add a New Value
+let numbers = deepArray.flat(6);
+numbers.push(8);
+console.log(numbers);
+
+
+Explanation:
+The push() method adds a new element to the end of the array.
+Here, we first flatten the deep array and then push the value 8.
+
+Output:
+[1, 2, 3, 4, 5, 6, 7, 8]
+
+Why useful:
+It is commonly used to insert new items into arrays dynamically.
+
+Method 3: pop() – Remove the Last Value
+let numbers2 = deepArray.flat(6);
+let removedValue = numbers2.pop();
+console.log(numbers2);
+console.log(removedValue);
+
+
+Explanation:
+The pop() method removes the last element from the array.
+It also returns the removed value.
+
+Output:
+[1, 2, 3, 4, 5, 6]
+7
+
+Why useful:
+It is useful when implementing stacks, undo actions, or removing recent items.
+
+Method 4: pull() – Remove a Specific Value (Custom Logic)
+
+JavaScript does not have a built-in pull() method like some libraries.
+We can create a pull-like behavior using filter().
+
+let numbers3 = deepArray.flat(6);
+
+function pull(array, valueToRemove) {
+  return array.filter(item => item !== valueToRemove);
+}
+
+let result = pull(numbers3, 4);
+console.log(result);
+
+
+Explanation:
+The pull() function removes all occurrences of a specific value.
+Here, it removes the value 4 from the array.
+
+Output:
+[1, 2, 3, 5, 6, 7]
+
+1) Creating Arrays in All Ways & Working Them Through All Loops
+
+In JavaScript, arrays can be created in multiple ways. Arrays store multiple values in a single variable and are heavily used in real applications.
+
+Method 1: Array Literal
+let arr1 = [10, 20, 30, 40];
+
+
+This is the most common and recommended way.
+
+Method 2: Using new Array()
+let arr2 = new Array(1, 2, 3);
+
+
+Creates an array using the constructor.
+
+Method 3: Empty Array and Push
+let arr3 = [];
+arr3.push(5, 6, 7);
+
+
+Useful when data comes dynamically.
+
+Method 4: Array.of()
+let arr4 = Array.of(9, 8, 7);
+
+
+Safely creates arrays from values.
+
+Method 5: Array.from()
+let arr5 = Array.from("HELLO");
+
+
+Creates array from iterable objects.
+
+Looping Through Arrays
+for loop
+for (let i = 0; i < arr1.length; i++) {
+  console.log(arr1[i]);
+}
+
+for…of loop
+for (let value of arr1) {
+  console.log(value);
+}
+
+for…in loop
+for (let index in arr1) {
+  console.log(arr1[index]);
+}
+
+while loop
+let i = 0;
+while (i < arr1.length) {
+  console.log(arr1[i]);
+  i++;
+}
+
+do…while loop
+let j = 0;
+do {
+  console.log(arr1[j]);
+  j++;
+} while (j < arr1.length);
+
+
+Each loop serves different purposes depending on readability and control needs.
+
+=== PAGE BREAK ===
+
+PAGE 14
+2) Exploring map(), forEach(), filter(), sort() (Reader Friendly)
+
+These methods are used to process arrays cleanly and efficiently.
+
+map() – Transform Data
+let nums = [1, 2, 3];
+let doubled = nums.map(n => n * 2);
+
+
+Explanation:
+Creates a new array by modifying each element.
+
+Output:
+[2, 4, 6]
+
+forEach() – Perform Action
+nums.forEach(n => console.log(n));
+
+
+Explanation:
+Executes a function for each element.
+Does not return a new array.
+
+filter() – Select Data
+let even = nums.filter(n => n % 2 === 0);
+
+
+Explanation:
+Returns elements that match a condition.
+
+Output:
+[2]
+
+sort() – Arrange Data
+let values = [40, 10, 100, 20];
+values.sort((a, b) => a - b);
+
+
+Explanation:
+Sorts numbers correctly using a compare function.
+
+Output:
+[10, 20, 40, 100]
+
+Quick Reader Summary
+
+map() → modify values
+
+forEach() → run logic
+
+filter() → remove unwanted
+
+sort() → arrange data
+
+=== PAGE BREAK ===
+
+PAGE 15
+3) Complete DOM Manipulation (Clear & Practical)
+
+DOM (Document Object Model) allows JavaScript to interact with HTML elements.
+
+Selecting Elements
+document.getElementById("title");
+document.querySelector(".box");
+document.querySelectorAll("p");
+
+Changing Content
+element.innerText = "New Text";
+element.innerHTML = "<b>Bold</b>";
+
+Changing Styles
+element.style.color = "red";
+element.style.backgroundColor = "yellow";
+
+Creating & Adding Elements
+let div = document.createElement("div");
+div.innerText = "Hello DOM";
+document.body.appendChild(div);
+
+Removing Elements
+element.remove();
+
+
+DOM manipulation allows dynamic UI updates without reloading the page.
+
+=== PAGE BREAK ===
+
+PAGE 16
+4) Events: Keyboard & Mouse (With Event Properties)
+
+Events allow JavaScript to respond to user actions.
+
+Mouse Events
+button.addEventListener("click", (event) => {
+  console.log(event.type);
+  console.log(event.target);
+});
+
+
+Common Mouse Events:
+click, dblclick, mouseover, mouseout, mousemove
+
+Keyboard Events
+input.addEventListener("keydown", (event) => {
+  console.log(event.key);
+  console.log(event.code);
+});
+
+
+Key Event Properties:
+
+event.key → actual key pressed
+
+event.code → physical key
+
+event.altKey, event.ctrlKey, event.shiftKey
+
+Example: Detect Enter Key
+if (event.key === "Enter") {
+  console.log("Enter pressed");
+}
